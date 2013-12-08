@@ -1,17 +1,21 @@
-firefox-addon-btcven
-====================
+Bitcoin Venezuela Addon
+=======================
 
-This very tiny (15KB) add-on will add a "bitcoin average" menu item to the "File" menu, optional toolbar button
+This very tiny (15KB) add-on will add a "bitcoin average" menu item to the "File" menu, optional toolbar button.
+Add-on to see the average price of Bitcoin and shortcut for Bitcoin Venezuela.
+Default in the nav-bar-customization-target before search-container. 
 
-BPI Price from CoinDesk.
-
+BPI Price from CoinDesk.<br\>
 http://bitcoinvenezuela.com/api/btcven.json
 
-currency money:
-VEF = Venezuela 
-ARS = Argentina 
-USD = USA 
-EUR = Europa 
+currency money: <br\>
+VEF = Venezuela <br\>
+ARS = Argentina <br\>
+USD = USA <br\>
+EUR = Europe
+
+You can contribute, here more information:<br\>
+https://github.com/btcven/firefox-addon-btcven/blob/master/CONTRIBUTING.md
 
 License
 =======
