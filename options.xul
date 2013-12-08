@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<vbox xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <setting pref="extensions.btcven.key" type="string" title="Hotkey">
+    Default is "B"
+  </setting>
+  <setting pref="extensions.btcven.modifiers" type="string" title="Hotkey modifiers">
+    Default is "accel,alt"
+  </setting>
+  <setting pref="extensions.btcven.locale" type="string" title="Locale"/>
+</vbox>
