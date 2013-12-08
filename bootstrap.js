@@ -52,8 +52,8 @@ const PREFS = {
   modifiers: "accel,alt",
   locale: Cc["@mozilla.org/chrome/chrome-registry;1"]
       .getService(Ci.nsIXULChromeRegistry).getSelectedLocale("global"),
-  toolbar: "",
-  "toolbar.before": "",
+  toolbar: "nav-bar-customization-target",
+  "toolbar.before": "search-container",
   get key() _("btcven.ak", getPref("locale"))
 };
 
@@ -148,7 +148,7 @@ function addMenuItem(win) {
     $("menu_FilePopup").insertBefore(btcvenMI, $("menu_FileQuitItem"));
   }
 	function btcven() {
-		win.gBrowser.selectedTab = win.gBrowser.addTab("http://www.google.com/");
+		win.gBrowser.selectedTab = win.gBrowser.addTab("http://www.bitcoinvenezuela.com/");
 	}
 
   unload(removeMI, win);

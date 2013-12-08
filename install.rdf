@@ -5,15 +5,15 @@
     <creator>Alexander Salas</creator>
     <id>{0c7a4de0-5f93-11e3-949a-0800200c9a66}</id>
     <name>Bitcoin Venezuela</name>
-    <version>1.4</version>
+    <version>1.5</version>
     <bootstrap>true</bootstrap>
     <type>2</type>
     <homepageURL>https://github.com/btcven/firefox-addon-btcven</homepageURL>
     <description>Add-on to see the average price of Bitcoin and shortcut for Bitcoin Venezuela.</description>
     <optionsType>2</optionsType>
 
-    <contributor>Randy Brito; http://RandyBrito.com/</contributor>
-    <contributor>Jesús Zuleta; </contributor>
+    <contributor>Randy Brito http://RandyBrito.com/</contributor>
+    <contributor>Jesús Zuleta </contributor>
     <contributor>Joan Telo</contributor>
     <contributor>Jorge Bonilla</contributor>
     <contributor>Daniel Arraez</contributor>
