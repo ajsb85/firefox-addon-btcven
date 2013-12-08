@@ -5,11 +5,11 @@
     <creator>Alexander Salas</creator>
     <id>{0c7a4de0-5f93-11e3-949a-0800200c9a66}</id>
     <name>Bitcoin Venezuela</name>
-    <version>1</version>
+    <version>1.4</version>
     <bootstrap>true</bootstrap>
     <type>2</type>
     <homepageURL>https://github.com/btcven/firefox-addon-btcven</homepageURL>
-    <description>This very tiny (15KB) add-on will add a "bitcoin average" menu item to the "File" menu, optional toolbar button.</description>
+    <description>Add-on to see the average price of Bitcoin and shortcut for Bitcoin Venezuela.</description>
     <optionsType>2</optionsType>
 
     <contributor>Randy Brito; http://RandyBrito.com/</contributor>
@@ -25,7 +25,7 @@
       <r:Description>
         <id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</id>
         <minVersion>4.0b4</minVersion>
-        <maxVersion>28.*</maxVersion>
+        <maxVersion>29.0</maxVersion>
       </r:Description>
     </targetApplication>
     <!-- SeaMonkey -->
@@ -33,7 +33,7 @@
       <r:Description>
         <id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</id>
         <minVersion>2.1a3</minVersion>
-        <maxVersion>2.7a1</maxVersion>
+        <maxVersion>2.26</maxVersion>
       </r:Description>
     </targetApplication>
     <!-- Fennec -->
@@ -41,7 +41,7 @@
       <r:Description>
         <id>{a23983c0-fd0e-11dc-95ff-0800200c9a66}</id>
         <minVersion>4.0b4</minVersion>
-        <maxVersion>10.0a1</maxVersion>
+        <maxVersion>29.0</maxVersion>
       </r:Description>
     </targetApplication>
     <!-- Thunderbird -->
@@ -49,7 +49,7 @@
       <r:Description>
         <id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</id>
         <minVersion>3.3a1</minVersion>
-        <maxVersion>10.0a1</maxVersion>
+        <maxVersion>29.0</maxVersion>
       </r:Description>
     </targetApplication>
   </r:Description>

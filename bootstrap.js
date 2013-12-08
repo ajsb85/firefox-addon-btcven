@@ -212,7 +212,7 @@ function main(win) {
 	btcvenTTVBVBLB1.setAttribute("value", _("avg", getPref("locale")));
 	//let btcvenTTVBVBHB = xul("hbox"); //To be filled by the program
 	btcvenTTVBVB.appendChild(btcvenTTVBVBLB1);
-				var row = xul('hbox');
+				
 				var c1 = xul('label');
 				var c2 = xul('label');
 				var c3 = xul('label');
@@ -221,42 +221,60 @@ function main(win) {
 				var c6 = xul('label');
 				var c7 = xul('label');
 				var c8 = xul('label');
+				var c9 = xul('label');
+				var c10 = xul('label');
 				c1.setAttribute('flex', '1');
 				c1.setAttribute('value', '0');
-				c1.setAttribute('style', style4);
-				c6.setAttribute('flex', '1');
-				c6.setAttribute('value', '0');
-				c6.setAttribute('style', style4);
-				c2.setAttribute('style', style2);
+				c8.setAttribute('flex', '1');
+				c8.setAttribute('value', '0');
+				c9.setAttribute('flex', '1');
+				c9.setAttribute('value', '0');
+				c10.setAttribute('flex', '1');
+				c10.setAttribute('value', '0');
 				c2.setAttribute('value', 'USD');
-				c5.setAttribute('style', style2);
 				c5.setAttribute('value', 'EUR');
+				c6.setAttribute('value', 'VEF');
+				c7.setAttribute('value', 'ARS');
 				c3.setAttribute('value', '=');
-				c7.setAttribute('value', '=');
 				c4.setAttribute('style', style1);
+				c2.setAttribute('style', style2);
+				c5.setAttribute('style', style2);
+				c6.setAttribute('style', style2);
+				c7.setAttribute('style', style2);
+				c1.setAttribute('style', style4);
+				c8.setAttribute('style', style4);
+				c9.setAttribute('style', style4);
+				c10.setAttribute('style', style4);
 				c4.setAttribute('value', '1 BTC');
-				c8.setAttribute('style', style1);
-				c8.setAttribute('value', '1 BTC');
+				
+				var row = xul('hbox');
 				row.appendChild(c1);
 				row.appendChild(c2);
 				row.appendChild(c3);
 				row.appendChild(c4);
 				
 				var row2 = xul('hbox');
-				row2.appendChild(c6);
-				row2.appendChild(c5);
-				row2.appendChild(c7);
 				row2.appendChild(c8);
-
-
-// 713,65 USD = 1 BTC
-// 520,82 EUR = 1 BTC
-// 45.844,78 VEF = 1 BTC
-// 6.958,07 ARS = 1 BTC
-
+				row2.appendChild(c5);
+				row2.appendChild(c3.cloneNode(false));
+				row2.appendChild(c4.cloneNode(false));
+				
+				var row3 = xul('hbox');
+				row3.appendChild(c9);
+				row3.appendChild(c6);
+				row3.appendChild(c3.cloneNode(false));
+				row3.appendChild(c4.cloneNode(false));
+				
+				var row4 = xul('hbox');
+				row4.appendChild(c10);
+				row4.appendChild(c7);
+				row4.appendChild(c3.cloneNode(false));
+				row4.appendChild(c4.cloneNode(false));
 
 	btcvenTTVBVB.appendChild(row);
 	btcvenTTVBVB.appendChild(row2);
+	btcvenTTVBVB.appendChild(row3);
+	btcvenTTVBVB.appendChild(row4);
 	//btcvenTTVBVB.appendChild(btcvenTTVBVBHB);
 	btcvenTTVB.appendChild(btcvenTTVBVB);
 	btcvenTT.appendChild(btcvenTTVB);
@@ -264,13 +282,16 @@ function main(win) {
 	($("navigator-toolbox") || $("mail-toolbox")).appendChild(btcvenTT);
 	
 	function mtgox(){
-		let urlUSD = "https://data.mtgox.com/api/2/BTCUSD/money/ticker";
+		let urlUSD = "http://bitcoinvenezuela.com/api/btcven.json";
 		let requestUSD = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"]
 					  .createInstance(Components.interfaces.nsIXMLHttpRequest);
 		requestUSD.onload = function(aEvent) {
 		  let text = aEvent.target.responseText;
 		  let jsObject = JSON.parse(text);
-			c1.setAttribute("value", jsObject.data.avg.value);
+			c1.setAttribute("value", formatMoney(jsObject.BTC.USD, 2, ',', '.'));
+			c8.setAttribute("value",  formatMoney(jsObject.BTC.EUR, 2, ',', '.'));
+			c9.setAttribute("value", formatMoney(jsObject.BTC.VEF, 2, ',', '.'));
+			c10.setAttribute("value", formatMoney(jsObject.BTC.ARS, 2, ',', '.'));
 		};
 		requestUSD.onerror = function(aEvent) {
 		   LOG("Error Status: " + aEvent.target.status);
@@ -278,19 +299,6 @@ function main(win) {
 		requestUSD.open("GET", urlUSD, true);
 		requestUSD.send(null);
 		
-		let urlEUR = "https://data.mtgox.com/api/2/BTCEUR/money/ticker";
-		let requestEUR = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"]
-					  .createInstance(Components.interfaces.nsIXMLHttpRequest);
-		requestEUR.onload = function(aEvent) {
-		  let text = aEvent.target.responseText;
-		  let jsObject = JSON.parse(text);
-			c6.setAttribute("value", jsObject.data.avg.value);
-		};
-		requestEUR.onerror = function(aEvent) {
-		   LOG("Error Status: " + aEvent.target.status);
-		};
-		requestEUR.open("GET", urlEUR, true);
-		requestEUR.send(null);
 
 	}
 
@@ -302,7 +310,7 @@ function main(win) {
   btcvenTBB.setAttribute("class", "toolbarbutton-1 chromeclass-toolbar-additional");
   btcvenTBB.setAttribute("label", _("btcven", getPref("locale")));
   btcvenTBB.setAttribute("tooltip", "btcven-tooltip");
-  btcvenTBB.setAttribute("context", "btcven-contextmenu");
+  //btcvenTBB.setAttribute("context", "btcven-contextmenu");
 
   btcvenTBB.addEventListener("command", btcven, true);
   let tbID = getPref("toolbar");
@@ -392,7 +400,7 @@ function startup(data, reason) {
 
   logo = addon.getResourceURI("icon16.svg").spec;
   watchWindows(main, XUL_APP.winType);
-  prefs = prefs.QueryInterface(Components.interfaces.nsIPrefBranch2);
+  prefs = prefs.QueryInterface(Components.interfaces.nsIPrefBranch);
   prefs.addObserver("", PREF_OBSERVER, false);
   unload(function() prefs.removeObserver("", PREF_OBSERVER));
 };
@@ -404,3 +412,13 @@ function LOG(msg) {
                                  .getService(Components.interfaces.nsIConsoleService);
   consoleService.logStringMessage(msg);
 }
+
+formatMoney = function(n, c, d, t){ 
+    c = isNaN(c = Math.abs(c)) ? 2 : c, 
+    d = d == undefined ? "." : d, 
+    t = t == undefined ? "," : t, 
+    s = n < 0 ? "-" : "", 
+    i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "", 
+    j = (j = i.length) > 3 ? j % 3 : 0;
+   return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+ };

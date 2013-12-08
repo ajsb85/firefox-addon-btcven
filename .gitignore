@@ -1,4 +1,5 @@
 # built application files
+*.xpi
 *.apk
 *.ap_
 
@@ -27,3 +28,6 @@ proguard/
 *.ipr
 *.iws
 .idea/
+
+#Thumbnails
+Thumbs.db
