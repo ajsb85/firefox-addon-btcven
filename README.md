@@ -5,7 +5,15 @@ This very tiny (15KB) add-on will add a "bitcoin average" menu item to the "File
 Add-on to see the average price of Bitcoin and shortcut for Bitcoin Venezuela.<br\>
 Default in the nav-bar-customization-target before search-container. 
 
-BPI Price from CoinDesk.<br\>
+BPI Price from CoinDesk: <br\>
+CoinDesk is the world leader in news, prices and information on bitcoin and other digital currencies.
+http://www.coindesk.com/price/ <br\>
+This data was produced from the CoinDesk Bitcoin Price Index. Non-USD currency data converted using hourly conversion rate from http://www.openexchangerates.org/ <br\>
+http://api.coindesk.com/v1/bpi/currentprice.json <br\>
+http://api.coindesk.com/v1/bpi/currentprice/VEF.json <br\>
+http://api.coindesk.com/v1/bpi/currentprice/ARS.json
+
+API from Bitcoin Venezuela: <br\>
 http://bitcoinvenezuela.com/api/btcven.json
 
 Currency money: <br\>
