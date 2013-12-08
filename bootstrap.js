@@ -147,14 +147,11 @@ function addMenuItem(win) {
 
     $("menu_FilePopup").insertBefore(btcvenMI, $("menu_FileQuitItem"));
   }
+	function btcven() {
+		win.gBrowser.selectedTab = win.gBrowser.addTab("http://www.google.com/");
+	}
 
   unload(removeMI, win);
-}
-
-function btcven() {
-  //ToDO
-
-  return true;
 }
 
 function main(win) {
@@ -174,6 +171,8 @@ function main(win) {
     btcvenKey.addEventListener("command", btcven, true);
     $(XUL_APP.baseKeyset).parentNode.appendChild(btcvenKeyset).appendChild(btcvenKey);
   }
+  
+
 
   // add menu bar item to File menu
   addMenuItem(win);
@@ -188,6 +187,112 @@ function main(win) {
     btcvenAMI.addEventListener("command", btcven, true);
     appMenu.insertBefore(btcvenAMI, $("appmenu-quit"));
   }
+  
+  	function btcven() {
+		win.gBrowser.selectedTab = win.gBrowser.addTab("http://www.bitcoinvenezuela.com/");
+	}
+	var style1 = 'color: #E07C00;font-size: 100%;vertical-align: baseline;text-align: right;font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica;letter-spacing: 1pt;';
+	var style2 = 'font-size: 0.625rem;vertical-align: baseline;';
+	var style3 = 'margin: 3px 0;font-weight: bold;text-align: center;padding: 2px 7px;background: #DC7118 url("'+ addon.getResourceURI("images/title-bg.png").spec+'") repeat-x 0 -5px;border: 1px solid #DC7118;text-shadow: 0px 0 1px #333; -moz-border-radius: 3px;color: white;';
+	var style4 = 'font-weight: bold;text-align: right;vertical-align: baseline;font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica;letter-spacing: 1pt;';
+	let btcvenTT = xul("tooltip");
+	btcvenTT.setAttribute("id", "btcven-tooltip");
+	btcvenTT.setAttribute("orient", "btcven-tooltip");
+	btcvenTT.setAttribute("style", "background-color: #33DD00;");
+	btcvenTT.addEventListener("popupshowing", mtgox, true);
+	btcvenTT.setAttribute("noautohide", "true");
+	let btcvenTTVB = xul("vbox");
+	btcvenTTVB.setAttribute("class", "tooltip");
+	let btcvenTTVBVB = xul("vbox");
+	btcvenTTVBVB.setAttribute("id", "btcven");
+	btcvenTTVBVB.setAttribute("class", "btcven-day");
+	let btcvenTTVBVBLB1 = xul("label");
+	btcvenTTVBVBLB1.setAttribute("id", "btcvenTTVBVBLB1");
+	btcvenTTVBVBLB1.setAttribute("style", style3);
+	btcvenTTVBVBLB1.setAttribute("value", _("avg", getPref("locale")));
+	//let btcvenTTVBVBHB = xul("hbox"); //To be filled by the program
+	btcvenTTVBVB.appendChild(btcvenTTVBVBLB1);
+				var row = xul('hbox');
+				var c1 = xul('label');
+				var c2 = xul('label');
+				var c3 = xul('label');
+				var c4 = xul('label');
+				var c5 = xul('label');
+				var c6 = xul('label');
+				var c7 = xul('label');
+				var c8 = xul('label');
+				c1.setAttribute('flex', '1');
+				c1.setAttribute('value', '0');
+				c1.setAttribute('style', style4);
+				c6.setAttribute('flex', '1');
+				c6.setAttribute('value', '0');
+				c6.setAttribute('style', style4);
+				c2.setAttribute('style', style2);
+				c2.setAttribute('value', 'USD');
+				c5.setAttribute('style', style2);
+				c5.setAttribute('value', 'EUR');
+				c3.setAttribute('value', '=');
+				c7.setAttribute('value', '=');
+				c4.setAttribute('style', style1);
+				c4.setAttribute('value', '1 BTC');
+				c8.setAttribute('style', style1);
+				c8.setAttribute('value', '1 BTC');
+				row.appendChild(c1);
+				row.appendChild(c2);
+				row.appendChild(c3);
+				row.appendChild(c4);
+				
+				var row2 = xul('hbox');
+				row2.appendChild(c6);
+				row2.appendChild(c5);
+				row2.appendChild(c7);
+				row2.appendChild(c8);
+
+
+// 713,65 USD = 1 BTC
+// 520,82 EUR = 1 BTC
+// 45.844,78 VEF = 1 BTC
+// 6.958,07 ARS = 1 BTC
+
+
+	btcvenTTVBVB.appendChild(row);
+	btcvenTTVBVB.appendChild(row2);
+	//btcvenTTVBVB.appendChild(btcvenTTVBVBHB);
+	btcvenTTVB.appendChild(btcvenTTVBVB);
+	btcvenTT.appendChild(btcvenTTVB);
+
+	($("navigator-toolbox") || $("mail-toolbox")).appendChild(btcvenTT);
+	
+	function mtgox(){
+		let urlUSD = "https://data.mtgox.com/api/2/BTCUSD/money/ticker";
+		let requestUSD = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"]
+					  .createInstance(Components.interfaces.nsIXMLHttpRequest);
+		requestUSD.onload = function(aEvent) {
+		  let text = aEvent.target.responseText;
+		  let jsObject = JSON.parse(text);
+			c1.setAttribute("value", jsObject.data.avg.value);
+		};
+		requestUSD.onerror = function(aEvent) {
+		   LOG("Error Status: " + aEvent.target.status);
+		};
+		requestUSD.open("GET", urlUSD, true);
+		requestUSD.send(null);
+		
+		let urlEUR = "https://data.mtgox.com/api/2/BTCEUR/money/ticker";
+		let requestEUR = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"]
+					  .createInstance(Components.interfaces.nsIXMLHttpRequest);
+		requestEUR.onload = function(aEvent) {
+		  let text = aEvent.target.responseText;
+		  let jsObject = JSON.parse(text);
+			c6.setAttribute("value", jsObject.data.avg.value);
+		};
+		requestEUR.onerror = function(aEvent) {
+		   LOG("Error Status: " + aEvent.target.status);
+		};
+		requestEUR.open("GET", urlEUR, true);
+		requestEUR.send(null);
+
+	}
 
   // add toolbar button
   let btcvenTBB = xul("toolbarbutton");
@@ -196,6 +301,9 @@ function main(win) {
   btcvenTBB.setAttribute("image", addon.getResourceURI("icon16.svg").spec);
   btcvenTBB.setAttribute("class", "toolbarbutton-1 chromeclass-toolbar-additional");
   btcvenTBB.setAttribute("label", _("btcven", getPref("locale")));
+  btcvenTBB.setAttribute("tooltip", "btcven-tooltip");
+  btcvenTBB.setAttribute("context", "btcven-contextmenu");
+
   btcvenTBB.addEventListener("command", btcven, true);
   let tbID = getPref("toolbar");
   ($("navigator-toolbox") || $("mail-toolbox")).palette.appendChild(btcvenTBB);
@@ -289,3 +397,10 @@ function startup(data, reason) {
   unload(function() prefs.removeObserver("", PREF_OBSERVER));
 };
 function shutdown(data, reason) unload()
+
+
+function LOG(msg) {
+  var consoleService = Components.classes["@mozilla.org/consoleservice;1"]
+                                 .getService(Components.interfaces.nsIConsoleService);
+  consoleService.logStringMessage(msg);
+}
