@@ -1,14 +1,14 @@
-Bitcoin Venezuela Addon
+Bitcoin Venezuela Add-On
 =======================
 
-This very tiny (15KB) add-on will add a "bitcoin average" menu item to the "File" menu, optional toolbar button.
-Add-on to see the average price of Bitcoin and shortcut for Bitcoin Venezuela.
+This very tiny (15KB) add-on will add a "bitcoin average" menu item to the "File" menu, optional toolbar button.<br\>
+Add-on to see the average price of Bitcoin and shortcut for Bitcoin Venezuela.<br\>
 Default in the nav-bar-customization-target before search-container. 
 
 BPI Price from CoinDesk.<br\>
 http://bitcoinvenezuela.com/api/btcven.json
 
-currency money: <br\>
+Currency money: <br\>
 VEF = Venezuela <br\>
 ARS = Argentina <br\>
 USD = USA <br\>
