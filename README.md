@@ -50,6 +50,6 @@ License
   		Jesús Zuleta <jesuszuleta@gmail.com>
   		Joan Telo
   		Jorge Bonilla
-  		Daniel Arraez
+  		Daniel Arraez <daniel.arraez@gmail.com>
   	Translators:    
   		Fatma Youssef <fatma.youssef@globaltranslator.info>
