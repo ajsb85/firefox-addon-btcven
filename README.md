@@ -47,7 +47,7 @@ License
   		Alexander Salas <alexandersalas@bitcoinvenezuela.com>
   	Contributors:   
   		Randy Brito <randy@cafebitcoin.com>
-  		Jesús Zuleta
+  		Jesús Zuleta <jesuszuleta@gmail.com>
   		Joan Telo
   		Jorge Bonilla
   		Daniel Arraez
