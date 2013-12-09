@@ -46,7 +46,7 @@ License
   	Developers: 
   		Alexander Salas <alexandersalas@bitcoinvenezuela.com>
   	Contributors:   
-  		Randy Brito 
+  		Randy Brito <randy@cafebitcoin.com>
   		Jesús Zuleta
   		Joan Telo
   		Jorge Bonilla
