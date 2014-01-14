@@ -53,3 +53,7 @@ License
   		Daniel Arraez <daniel.arraez@gmail.com>
   	Translators:    
   		Fatma Youssef <fatma.youssef@globaltranslator.info>
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/btcven/firefox-addon-btcven/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
