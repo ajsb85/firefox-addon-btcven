@@ -2,26 +2,26 @@ Bitcoin Venezuela Add-On
 ========================
 Add-on to see the average price of Bitcoin and shortcut for Bitcoin Venezuela.
 
-This very tiny (15KB) add-on will add a "bitcoin average" menu item to the "File" menu, optional toolbar button.<br\>
-Add-on to see the average price of Bitcoin and shortcut for Bitcoin Venezuela.<br\>
+This very tiny (8.5KB) add-on will add a "bitcoin average" menu item to the "File" menu, optional toolbar button.<br>
+Add-on to see the average price of Bitcoin and shortcut for Bitcoin Venezuela.<br>
 Default in the nav-bar-customization-target before search-container. 
 
-BPI Price from CoinDesk: <br\>
+BPI Price from CoinDesk: <br>
 CoinDesk is the world leader in news, prices and information on bitcoin and other digital currencies.
-http://www.coindesk.com/price/ <br\>
-This data was produced from the CoinDesk Bitcoin Price Index. Non-USD currency data converted using hourly conversion rate from http://www.openexchangerates.org/ <br\>
+http://www.coindesk.com/price/ <br>
+This data was produced from the CoinDesk Bitcoin Price Index. Non-USD currency data converted using hourly conversion rate from http://www.openexchangerates.org/ <br>
 http://api.coindesk.com/v1/bpi/currentprice.json
 
-API from Bitcoin Venezuela: <br\>
+API from Bitcoin Venezuela: <br>
 http://api.bitcoinvenezuela.com/
 
-Currency money: <br\>
-VEF = Venezuela <br\>
-ARS = Argentina <br\>
-USD = USA <br\>
+Currency money: <br>
+VEF = Venezuela <br>
+ARS = Argentina <br>
+USD = USA <br>
 EUR = Europe
 
-You can contribute, here more information:<br\>
+You can contribute, here more information:<br>
 https://github.com/mozillavenezuela/firefox-addon-btcven/blob/master/CONTRIBUTING.md
 
 License
