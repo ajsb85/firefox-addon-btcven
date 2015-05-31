@@ -15,11 +15,11 @@ http://api.coindesk.com/v1/bpi/currentprice.json
 API from Bitcoin Venezuela: <br>
 http://api.bitcoinvenezuela.com/
 
-Currency money: <br>
-VEF = Venezuela <br>
-ARS = Argentina <br>
-USD = USA <br>
-EUR = Europe
+#### Currency money:
+* VEF = Venezuela
+* ARS = Argentina
+* USD = USA
+* EUR = Europe
 
 You can contribute, here more information:<br>
 https://github.com/mozillavenezuela/firefox-addon-btcven/blob/master/CONTRIBUTING.md
