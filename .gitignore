@@ -2,6 +2,8 @@
 *.xpi
 *.apk
 *.ap_
+*.zip
+*.jar
 
 # files for the dex VM
 *.dex

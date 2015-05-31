@@ -1,0 +1,16 @@
+{
+  "title": "Bitcoin Venezuela",
+  "name": "btcven",
+  "id": "{0c7a4de0-5f93-11e3-949a-0800200c9a66}",
+  "version": "2.0.0",
+  "description": "Add-on to see the average price of Bitcoin and shortcut for Bitcoin Venezuela.",
+  "main": "index.js",
+  "author": "Alexander J. Salas B. <a.salas@ieee.org>",
+  "translators": ["Fatma Youssef <fatma2210@yahoo.com>"],
+  "engines": {
+    "firefox": ">=38.0a1",
+    "seamonkey": ">=2.33 <=2.39",
+    "thunderbird": ">=38.0a1"
+  },
+  "license": "MPL-2.0"
+}
