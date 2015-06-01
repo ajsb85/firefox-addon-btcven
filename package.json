@@ -8,8 +8,7 @@
   "author": "Alexander J. Salas B. <a.salas@ieee.org>",
   "translators": ["Fatma Youssef <fatma2210@yahoo.com>"],
   "engines": {
-    "firefox": "",
-    "firefox": ">=36.0a1 <=40.0a2"
+    "firefox": ">=36.0a1 <=40.0a2",
     "seamonkey": ">=2.33 <=2.39"
   },
   "license": "MPL-2.0"
