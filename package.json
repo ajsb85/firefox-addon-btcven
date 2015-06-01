@@ -9,8 +9,7 @@
   "translators": ["Fatma Youssef <fatma2210@yahoo.com>"],
   "engines": {
     "firefox": ">=38.0a1",
-    "seamonkey": ">=2.33 <=2.39",
-    "thunderbird": ">=38.0a1"
+    "seamonkey": ">=2.33 <=2.39"
   },
   "license": "MPL-2.0"
 }
