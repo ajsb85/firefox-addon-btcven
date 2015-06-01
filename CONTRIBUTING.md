@@ -1,6 +1,11 @@
 ## Pull Request
 Feel free to make pull request.
 
+## Review
+You can contribute with your user review:
+
+https://addons.mozilla.org/addon/btcven/reviews/add
+
 ## Email Support
 alexandersalas@bitcoinvenezuela.com
 

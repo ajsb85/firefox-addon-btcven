@@ -44,6 +44,7 @@ License
   		Joan Telo <telojoan@gmail.com>
   		Jorge Bonilla <jorge.luis.bonilla@gmail.com>
   		Daniel Arraez <daniel.arraez@gmail.com>
+  		Rafael Moraos <rmoraos@gmail.com>
   	Translators:    
   		Fatma Youssef <fatma2210@yahoo.com>
 
