@@ -5,17 +5,8 @@
 var { ToggleButton } = require('sdk/ui/button/toggle');
 var panels = require("sdk/panel");
 var self = require("sdk/self");
-
-var button = ToggleButton({
-  id: "btcven",
-  label: "btcven",
-  icon: {
-    "16": "./icon16.svg",
-    "32": "./icon32.svg",
-    "64": "./icon64.svg"
-  },
-  onChange: handleChange
-});
+var name = "lightweightThemes.selectedThemeID";
+var selectedThemeID = require("sdk/preferences/service").get(name);
 
 var panel = panels.Panel({
   width: 140,
@@ -35,3 +26,15 @@ function handleChange(state) {
 function handleHide() {
   button.state('window', {checked: false});
 }
+
+var button = ToggleButton({
+  id: "btcven",
+  label: "btcven",
+  icon: {
+    "16": selectedThemeID === "firefox-devedition@mozilla.org" ? 
+          "./icondev16.svg" : "./icon16.svg",
+    "32": "./icon32.svg",
+    "64": "./icon64.svg"
+  },
+  onChange: handleChange
+});
