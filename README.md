@@ -1,5 +1,7 @@
 Bitcoin Venezuela Add-On
 ========================
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/ajsb85/firefox-addon-btcven.svg)](https://greenkeeper.io/)
 Add-on to see the average price of Bitcoin and shortcut for Bitcoin Venezuela.
 
 This very tiny (8.5KB) add-on will add a "bitcoin average" menu item to the "File" menu, optional toolbar button.<br>
